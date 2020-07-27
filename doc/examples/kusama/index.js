@@ -8,8 +8,9 @@ try {
     values,
     width: 250,
     height: 100,
-    stroke: 'yellow',
+    stroke: '#e6007a',
     strokeWidth: 2.25,
+    strokeOpacity: 1,
   });
 
   writeFileSync(path.join(__dirname, 'sparkline.svg'), svg);

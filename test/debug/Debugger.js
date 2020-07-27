@@ -1,10 +1,12 @@
 const { expect } = require('../Common');
 const Debugger = require('../../lib/debug/Debugger');
+const initialDebugEnv = process.env.DEBUG;
 
 describe('#debug Debugger', function() {
   context('when creating a new debugger', function() {
     it('should create a debugger with the specific name and color if provided', function() {
       const myDebugger = new Debugger('my-debugger', 'red');
+      expect(myDebugger.constructor).to.equal(Debugger);
       expect(myDebugger.name).to.be.a('string').and.to.equal('my-debugger');
       expect(myDebugger.color).to.be.a('string').and.to.equal('\u001b[31m');
     });
@@ -12,6 +14,8 @@ describe('#debug Debugger', function() {
     it('should create a debugger with the specific name and a random color if not provided or unknown', function() {
       const myDebugger1 = new Debugger('my-debugger', 'purple');
       const myDebugger2 = new Debugger('my-debugger');
+      expect(myDebugger1.constructor).to.equal(Debugger);
+      expect(myDebugger1.constructor).to.equal(Debugger);
       expect(myDebugger1.name).to.be.a('string').and.to.equal('my-debugger');
       expect(myDebugger1.color).to.be.a('string');
       expect(myDebugger2.name).to.be.a('string').and.to.equal('my-debugger');
@@ -121,6 +125,10 @@ describe('#debug Debugger', function() {
 
       process.env.DEBUG = '*,-my-debugger';
       expect(myDebugger.toDebug()).to.be.a('boolean').and.to.be.false;
+    });
+
+    after(function() {
+      process.env.DEBUG = initialDebugEnv;
     });
   });
 });

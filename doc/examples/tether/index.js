@@ -6,13 +6,11 @@ const values = require('./values');
 try {
   const svg = sparkline({
     values,
-    width: 250,
-    height: 100,
-    stroke: 'aliceblue',
-    strokeWidth: 1.25,
+    width: 500,
+    height: 200,
+    stroke: '#22a079',
+    strokeWidth: 0.5,
     strokeOpacity: 1,
-    fill: 'grey',
-    fillOpacity: 1,
   });
 
   writeFileSync(path.join(__dirname, 'sparkline.svg'), svg);

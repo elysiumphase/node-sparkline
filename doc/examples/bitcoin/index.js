@@ -11,8 +11,6 @@ try {
     stroke: '#57bd0f',
     strokeWidth: 1.25,
     strokeOpacity: 1,
-    fill: 'none',
-    fillOpacity: 0,
   });
 
   writeFileSync(path.join(__dirname, 'sparkline.svg'), svg);
