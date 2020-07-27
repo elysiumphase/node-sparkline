@@ -10,6 +10,7 @@ try {
     height: 50,
     stroke: '#ed5565',
     strokeWidth: 1.25,
+    strokeOpacity: 1,
   });
 
   writeFileSync(path.join(__dirname, 'sparkline.svg'), svg);

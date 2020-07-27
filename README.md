@@ -12,7 +12,7 @@
 - [Presentation](#presentation)
 - [Installation](#installation)
 - [Technical information](#technical-information)
-  - [Node.js](#node.js)
+  - [Node.js](#nodejs)
   - [Debugging](#debugging)
   - [Tests](#tests)
     - [Linting](#linting)
@@ -22,9 +22,6 @@
     - [Import node-sparkline](#import-node-sparkline)
     - [sparkline(options)](#sparklineoptions)
     - [Examples](#examples)
-      - [Bitcoin](#bitcoin)
-      - [Ethereum](#ethereum)
-      - [Chainlink](#chainlink)
   - [Environment variables](#environment-variables)
   - [Errors](#errors)
     - [Object structure](#object-structure)
@@ -36,7 +33,7 @@
 
 *node-sparkline* is a sparkline generator written in pure Node.js using ES6 and ES7 features with no dependency. It calculates points based on values to finally generate a polyline in a pure SVG (Scalable Vector Graphics) format. These values could be prices during the last 7 fays for an example.
 
-The aim of this project is to provide a simple, lightweight, zero-depency and fast sparkline generator in SVG and let user tune height, width, stroke color, stroke width, stroke opacity, fill color and fill opacity.
+The aim of this project is to provide a very simple, lightweight, zero-depency, fast and **fully-tested** sparkline generator in SVG format and let user tune height, width, stroke color, stroke width and stroke opacity.
 
 # Installation
 
@@ -94,8 +91,6 @@ const sparkline = require('node-sparkline');
     - `stroke` **<String\>** The stroke color. An hexadecimal value or one of these [generic names](lib/helpers/color.js). *Default*: `#57bd0f`
     - `strokeWidth` **<Number\>** The stroke width in pixels. *Min*: `0` *Default*: `1.25`
     - `strokeOpacity` **<Number\>** The stroke opacity. *Min*: `0` *Max*: `1` *Default*: `1`
-    - `fill` **<String\>** The fill color. An hexadecimal value or one of these [generic names](lib/helpers/color.js). *Default*: `none`
-    - `fillOpacity` **<Number\>** The fill opacity. *Min*: `0` *Max*: `1` *Default*: `0`
 
   - Returns: **<String\>** The SVG tags of the generated SVG image
   - Throws: **<InputError\>**
@@ -120,8 +115,6 @@ try {
     stroke: '#57bd0f',
     strokeWidth: 1.25,
     strokeOpacity: 1,
-    fill: 'none',
-    fillOpacity: 0,
   });
 
   writeFileSync(path.join(__dirname, 'sparkline.svg'), svg);
