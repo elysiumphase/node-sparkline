@@ -102,8 +102,6 @@ You can find examples here: [doc/examples](doc/examples)
 In these examples please prefer a well-known and tested asynchronous logger over the use of *console* module.
 
 ```javascript
-const { writeFileSync } = require('fs');
-const path = require('path');
 const sparkline = require('node-sparkline');
 const values = require('./values'); // values is an array
 
@@ -117,7 +115,8 @@ try {
     strokeOpacity: 1,
   });
 
-  writeFileSync(path.join(__dirname, 'sparkline.svg'), svg);
+  // svg is a string with SVG + polyline tags
+  // ...
 } catch (e) {
   console.error(e.toString());
 }
