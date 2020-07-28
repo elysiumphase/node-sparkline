@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.1 - delivery @28/07/2020
+
+- update README and examples
+
 ## 1.1.0 - delivery @27/07/2020
 
 - remove fill options
