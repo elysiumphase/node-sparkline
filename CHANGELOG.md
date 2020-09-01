@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.0 - delivery @01/09/2020
+
+- embed debugger and tests from bugbug repository
+
 ## 1.1.1 - delivery @28/07/2020
 
 - update README and examples
