@@ -33,7 +33,7 @@
 
 *node-sparkline* is a sparkline generator written in pure Node.js using ES6 and ES7 features with no dependency. It calculates points based on values to finally generate a polyline in a pure SVG (Scalable Vector Graphics) format. These values could be prices during the last 7 fays for an example.
 
-The aim of this project is to provide a very simple, lightweight, zero-depency, fast and **fully-tested** sparkline generator in SVG format and let user tune height, width, stroke color, stroke width and stroke opacity.
+The aim of this project is to provide a very simple, lightweight, zero-dependency, fast and **fully-tested** sparkline generator in SVG format and let user tune height, width, stroke color, stroke width and stroke opacity.
 
 # Installation
 

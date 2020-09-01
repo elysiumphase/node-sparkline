@@ -1,6 +1,6 @@
 {
   "name": "node-sparkline",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A lightweight and zero-dependencies pure Node.js sparkline generator",
   "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://github.com/adrienv1520)",
   "main": "lib/index.js",
