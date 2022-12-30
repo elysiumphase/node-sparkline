@@ -42,7 +42,7 @@
     "eslint": "~5.12.1",
     "eslint-config-airbnb-base": "~13.1.0",
     "eslint-plugin-import": "~2.15.0",
-    "mocha": "~7.1.1",
+    "mocha": "~10.2.0",
     "svg-parser": "~2.0.4"
   }
 }
