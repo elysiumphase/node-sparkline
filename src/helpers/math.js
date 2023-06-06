@@ -14,22 +14,8 @@ const minmax = function minmax(array) {
     return { min: undefined, max: undefined };
   }
 
-  let min;
-  let max;
-
-  array.forEach((value) => {
-    if (max === undefined) {
-      max = value;
-    } else if (value > max) {
-      max = value;
-    }
-
-    if (min === undefined) {
-      min = value;
-    } else if (value < min) {
-      min = value;
-    }
-  });
+  const min = Math.min(...array)
+  const max = Math.max(...array)
 
   return { min, max };
 };
