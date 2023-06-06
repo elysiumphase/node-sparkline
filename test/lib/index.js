@@ -1,8 +1,8 @@
 const { parse } = require('svg-parser');
 const { expect } = require('../Common');
-const sparkline = require('../../lib/index.js');
-const LibError = require('../../lib/LibError');
-const { defaults } = require('../../lib/settings');
+const sparkline = require('../../src/index.js');
+const LibError = require('../../src/LibError');
+const { defaults } = require('../../src/settings');
 
 const values = [
   10,

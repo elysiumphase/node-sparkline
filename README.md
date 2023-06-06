@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="doc/examples/bitcoin/sparkline.svg" title="node-sparkline" alt="node-sparkline"/>
+  <img src="docs/examples/bitcoin/sparkline.svg" title="node-sparkline" alt="node-sparkline"/>
 <p>
 
 <h1><p align="center">node-sparkline<p></h1>
@@ -9,6 +9,8 @@
 <p>
 
 # Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [Presentation](#presentation)
 - [Installation](#installation)
 - [Technical information](#technical-information)
@@ -26,8 +28,12 @@
   - [Errors](#errors)
     - [Object structure](#object-structure)
     - [Codes](#codes)
-- [Development](#development)
-- [Licence](#licence)
+  - [Known issues](#known-issues)
+  - [Code of Conduct](#code-of-conduct)
+  - [Contributing](#contributing)
+  - [Support](#support)
+  - [Security](#security)
+  - [License](#license)
 
 # Presentation
 
@@ -54,21 +60,17 @@ The aim of this project is to provide a very simple, lightweight, zero-dependenc
 
 ## Tests
 
-Command to run all tests:
-
-`npm test`
-
 ### Linting
 
 ESLint with Airbnb base rules. See [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
-`npm run test:lint`
+`npm run lint`
 
 ### Unit
 
 Mocha and Chai.
 
-`npm run test:unit`
+`npm test`
 
 # Usage
 
@@ -84,20 +86,20 @@ const sparkline = require('node-sparkline');
 
 ### sparkline(options)
 
-  - `options`**<Object\>**:
-    - `values`* **<Array\>** An array of values to draw the sparkline.
-    - `width` **<Number\>** The width in pixels to fix for the generated SVG. *Default*: `135`
-    - `height` **<Number\>** The height in pixels to fix for the generated SVG. *Default*: `50`
-    - `stroke` **<String\>** The stroke color. An hexadecimal value or one of these [generic names](lib/helpers/color.js). *Default*: `#57bd0f`
-    - `strokeWidth` **<Number\>** The stroke width in pixels. *Min*: `0` *Default*: `1.25`
-    - `strokeOpacity` **<Number\>** The stroke opacity. *Min*: `0` *Max*: `1` *Default*: `1`
+- `options`**<Object\>**:
+  - `values`* **<Array\>** An array of values to draw the sparkline.
+  - `width` **<Number\>** The width in pixels to fix for the generated SVG. *Default*: `135`
+  - `height` **<Number\>** The height in pixels to fix for the generated SVG. *Default*: `50`
+  - `stroke` **<String\>** The stroke color. An hexadecimal value or one of these [generic names](src/helpers/color.js). *Default*: `#57bd0f`
+  - `strokeWidth` **<Number\>** The stroke width in pixels. *Min*: `0` *Default*: `1.25`
+  - `strokeOpacity` **<Number\>** The stroke opacity. *Min*: `0` *Max*: `1` *Default*: `1`
 
-  - Returns: **<String\>** The SVG tags of the generated SVG image
-  - Throws: **<InputError\>**
+- Returns: **<String\>** The SVG tags of the generated SVG image
+- Throws: **<InputError\>**
 
 ### Examples
 
-You can find examples here: [doc/examples](doc/examples)
+You can find examples here: [docs/examples](docs/examples)
 
 In these examples please prefer a well-known and tested asynchronous logger over the use of *console* module.
 
@@ -122,15 +124,15 @@ try {
 }
 ```
 
-![Bitcoin](doc/examples/bitcoin/sparkline.svg "Bitcoin")
+![Bitcoin](docs/examples/bitcoin/sparkline.svg "Bitcoin")
 
-![Ethereum](doc/examples/ethereum/sparkline.svg "Ethereum")
+![Ethereum](docs/examples/ethereum/sparkline.svg "Ethereum")
 
-![Chainlink](doc/examples/chainlink/sparkline.svg "Chainlink")
+![Chainlink](docs/examples/chainlink/sparkline.svg "Chainlink")
 
-![Kusama](doc/examples/kusama/sparkline.svg "Kusama")
+![Kusama](docs/examples/kusama/sparkline.svg "Kusama")
 
-![Tether](doc/examples/tether/sparkline.svg "Tether")
+![Tether](docs/examples/tether/sparkline.svg "Tether")
 
 ## Environment variables
 
@@ -174,30 +176,36 @@ Errors emitted by *node-sparkline* inherit the native Error prototype.
   <tr>
     <td>MISSING_VALUES</td>
     <td>The values to draw the sparkline are missing.</td>
-    <td>lib/index</td>
+    <td>src/index</td>
   </tr>
 
   <tr>
     <td>INVALID_VALUES</td>
     <td><i>values</i> parameter must be an array.</td>
-    <td>lib/index</td>
+    <td>src/index</td>
   </tr>
 </table>
 
-# Development
+## Known issues
 
-All contributions are greatly welcome :)
+/
 
-Please follow Git flow, ES6/7, ESLint Airbnb base rules.
+## Code of Conduct
 
-# Licence
+This project has a [Code of Conduct](.github/CODE_OF_CONDUCT.md). By interacting with this repository, organization, or community you agree to abide by its terms.
 
-*node-sparkline* is released under the MIT license.
+## Contributing
 
-Copyright (C) 2020 Adrien Valcke
+Please take a moment to read our [Contributing Guidelines](.github/CONTRIBUTING.md) if you haven't done so yet.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+## Support
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Please see our [Support](.github/SUPPORT.md) page if you have any questions or for any help needed.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## Security
+
+For any security concerns or issues, please visit our [Security Policy](.github/SECURITY.md) page.
+
+## License
+
+[MIT](LICENSE.md).

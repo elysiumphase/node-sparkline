@@ -2,11 +2,12 @@ const { is, exists } = require('../helpers/object');
 const Codes = require('./Codes');
 
 class LibError extends Error {
-  constructor({ code, message, name } = {}) {
+  constructor({ code, message, name } = {}, originError = '') {
     super();
     this.setCode(code);
     this.setMessage(message);
     this.setName(name);
+    this.setStack(originError);
   }
 
   setCode(value) {
@@ -30,6 +31,12 @@ class LibError extends Error {
       this.name = value;
     } else {
       this.name = Codes[this.code].name;
+    }
+  }
+
+  setStack(originError) {
+    if (is(Error, originError) && is(String, originError.stack)) {
+      this.stack = originError.stack;
     }
   }
 

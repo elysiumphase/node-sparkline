@@ -1,5 +1,5 @@
 const { expect } = require('../Common');
-const { math: { minmax } } = require('../../lib/helpers');
+const { math: { minmax } } = require('../../src/helpers');
 
 describe('#helpers math', function() {
   context('when using minmax', function() {
