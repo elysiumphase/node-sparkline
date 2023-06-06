@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.3.0 - delivery @06/06/2023
+
+- fix: strange sparkline vertical lines
+- chore: update dev dependencies
+- docs: update
+
 ## 1.2.0 - delivery @01/09/2020
 
 - embed debugger and tests from bugbug repository

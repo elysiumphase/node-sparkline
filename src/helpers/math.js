@@ -3,7 +3,7 @@ const { is } = require('./object');
 /**
  * @func minmax
  *
- * Directly get min and max values in a specific array.
+ * directly get min and max values in a specific array, works with numbers and strings
  * NOTE: for performance use.
  *
  * @param  {Array} array
@@ -14,8 +14,22 @@ const minmax = function minmax(array) {
     return { min: undefined, max: undefined };
   }
 
-  const min = Math.min(...array)
-  const max = Math.max(...array)
+  let min;
+  let max;
+
+  array.forEach((value) => {
+    if (max === undefined) {
+      max = value;
+    } else if (value > max) {
+      max = value;
+    }
+
+    if (min === undefined) {
+      min = value;
+    } else if (value < min) {
+      min = value;
+    }
+  });
 
   return { min, max };
 };

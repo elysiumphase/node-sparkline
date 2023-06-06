@@ -1,9 +1,5 @@
 /**
  * node-sparkline
- *
- * A lightweight and zero-dependencies pure Node.js sparkline generator.
- *
- * Author: Adrien Valcke <adrienvalcke@icloud.com>
  */
 const debug = require('./debug')('node-sparkline');
 const Sparkline = require('./Sparkline');

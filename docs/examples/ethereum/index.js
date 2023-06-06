@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { promisify } = require('util');
-const sparkline = require('../../../lib');
+const sparkline = require('../../../src');
 const values = require('./values');
 
 const writeFile = promisify(fs.writeFile);
@@ -10,10 +10,10 @@ const writeFile = promisify(fs.writeFile);
   try {
     const svg = sparkline({
       values,
-      width: 500,
-      height: 200,
-      stroke: '#22a079',
-      strokeWidth: 0.5,
+      width: 135,
+      height: 50,
+      stroke: '#57bd0f',
+      strokeWidth: 1.25,
       strokeOpacity: 1,
     });
 
